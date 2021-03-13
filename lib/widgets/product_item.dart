@@ -56,7 +56,9 @@ class ProductItem extends StatelessWidget {
             ),
             onPressed: () {
               cart.addItem(product.id, product.price, product.title);
+              // ignore: deprecated_member_use
               Scaffold.of(context).hideCurrentSnackBar();
+              // ignore: deprecated_member_use
               Scaffold.of(context).showSnackBar(
                 SnackBar(
                   content: Text('Added item to cart'),
